@@ -85,7 +85,7 @@ def load_data():
     return data.dropna()
 
 data = load_data()
-stocks = ['CNERGY.KA', 'SNGP.KA', 'PAEL.KA', 'POWER.KA', 'WTL.KA']
+stocks = ['Askari Bank', 'Prema (At-Tahur)', 'Hub Power Company', 'Bank Al-Habib', 'Lucky Cement Limited']
 
 # Calculate daily returns
 @st.cache_data
