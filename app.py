@@ -80,18 +80,20 @@ st.sidebar.markdown(
 
 # Load data
 @st.cache_data
+# Upload and load data
 uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx"])
-if uploaded_file is not None:
+
+@st.cache_data
+def load_data(uploaded_file):
     data = pd.read_excel(uploaded_file)
-    data = data.dropna()
-    # Continue with rest of your code here...
+    return data.dropna()
+
+if uploaded_file is not None:
+    data = load_data(uploaded_file)
 else:
     st.warning("Please upload an Excel file to continue.")
     st.stop()
 
-
-data = load_data()
-stocks = ['Askari Bank', 'Prema (At-Tahur)', 'Hub Power Company', 'Bank Al-Habib', 'Lucky Cement Limited']
 
 # Calculate daily returns
 @st.cache_data
