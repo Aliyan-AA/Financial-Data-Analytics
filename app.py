@@ -81,7 +81,13 @@ st.sidebar.markdown(
 # Load data
 @st.cache_data
 def load_data():
-    data = pd.read_excel("final_fda_pro.xlsx")
+    uploaded_file = st.file_uploader("Upload your Excel file", type=["xlsx"])
+if uploaded_file is not None:
+    data = pd.read_excel(uploaded_file)
+    # Proceed with your app logic
+else:
+    st.warning("Please upload an Excel file to proceed.")
+
     return data.dropna()
 
 data = load_data()
