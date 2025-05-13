@@ -22,6 +22,6 @@ Check out the deployed app on Streamlit Cloud: https://financial-data-analytics1
 ├── requirements.txt # Dependency list
 └── README.md # Project documentation
 
-##🔗 Connect
+## 🔗 Connect
 Feel free to reach out or connect on LinkedIn (https://www.linkedin.com/in/aliyan-ahmad-1b1b89271/)
 Email: aliyanahmad265@gmail.com
